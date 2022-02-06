@@ -11,6 +11,8 @@ def todo():
     home = Tk()
     home.title("todo list")    
     home.geometry("350x350")
+    home.minsize(350,350)
+    home.maxsize(350,350)
 
 
     

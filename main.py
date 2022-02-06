@@ -38,14 +38,15 @@ def todo():
         ll.delete(0,END)
         for itm in task.showalltask():
             ll.insert(ACTIVE,itm[1])
-        
+    def exit():
+        home.destroy()
     ll=Listbox(home,listvariable=list_v,height=11,selectmode=SINGLE)
     ll.place(x=180,y=80)
     
     Button(home,text="Add Task" ,width="15",bd=1,relief="ridge",command=add).place(x=40,y=140)
     Button(home,text="Delete",width="15",bd=1,relief="ridge",command=delete).place(x=40,y=170)
     Button(home,text="Delete All",width="15",bd=1,relief="ridge",command=deleteall).place(x=40,y=200)
-    Button(home,text="Exit",width="15",bd=1,relief="ridge").place(x=40,y=230)
+    Button(home,text="Exit",width="15",bd=1,relief="ridge",command=exit).place(x=40,y=230)
 
 
      
